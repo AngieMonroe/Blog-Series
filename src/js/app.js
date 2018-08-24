@@ -16,9 +16,7 @@ const observer = () => {
       uid = user.uid;
       photoUrl = user.photoUrl;
       console.log('existe usuario');
-      // console.log(user);
       userPrint(user);
-      console.log(user);
     } else {
       console.log('no existe usuario');
     }
@@ -60,7 +58,7 @@ const renderInfo = (data) => {
   data = data.Search;
   let image;
   for (let i = 0; i < data.length; i++) {
-    if (data[i].Poster !== null) {
+    if (data[i].Poster !== 'N/A') {
       image = data[i].Poster;
     } else {
       image = '../css/image/noDisponible.png';
