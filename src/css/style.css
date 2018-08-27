@@ -7,10 +7,6 @@ p{
     font-size: 1.5rem;
 }
 
-body{
-    background-color: black;
-}
-
 .navbar{
     background-color: purple;
 }
@@ -38,5 +34,23 @@ body{
 }
 
 .card-img-top{
-    height: 17vh;
+    height: 23vh;
+}
+
+.card{
+    height: 43vh;
+}
+
+.central{
+    background-image: url('../css/image/movie.png');
+}
+
+.img-fluid{
+    height: 90vh;
+    margin:10px auto;
+	display:block;
+}
+
+body{
+    background-color: black;
 }
