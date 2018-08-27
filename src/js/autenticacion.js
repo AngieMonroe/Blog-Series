@@ -65,10 +65,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-// Envía un mensaje de verificación al usuario
-/* Una vez que el usuario se registra se envía un correo de verificación para 
-que el usuario este al tanto de su ingreso a la red social */
-
 const check = () => {
   let user = firebase.auth().currentUser; 
   user.sendEmailVerification().then(function() {
@@ -77,46 +73,6 @@ const check = () => {
     console.log(error);
   });
 };
-
-// Registro usuario con Google
-/* Una opción que tienen el usuario es entrar utilizando una red social */
-
-btnGoogle.addEventListener('click', google => {
-  let provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider)
-    .then(function(result) {
-    })
-    .catch(function(error) {
-    // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-    // ...
-    });
-});
-
-// Ingresar con Facebook
-
-btnFacebook.addEventListener('click', facebook => {
-  let provider = new firebase.auth.FacebookAuthProvider();
-  provider = provider.addScope('public_profile');
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    let token = result.credential.accesstoken;
-  })
-    .catch(function(error) {
-    // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-    // ...
-    });
-});
 
 // Función guardar nombre en currentUser.displayName
 const nameDisplay = (name) => {
