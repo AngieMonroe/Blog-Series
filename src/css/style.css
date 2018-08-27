@@ -19,6 +19,10 @@ body{
     color: white;
 }
 
+.card-title{
+    font-size: .8rem;
+}
+
 .navbar-brand{
     font-size: 1.5rem;
     font-family: 'Bungee Inline', cursive;

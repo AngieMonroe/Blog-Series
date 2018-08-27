@@ -63,7 +63,6 @@ const renderInfo = (data) => {
     } else {
       image = '../css/image/noDisponible.png';
     }
-    console.log(image);
     series.innerHTML += `
     <div class="col-6 col-md-3 mb-2">
     <div class="card-deck">
